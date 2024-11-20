@@ -22,17 +22,11 @@ public class WordFrequencyGame {
 
                 wordFrequencies = getFinalWordFrequencies(wordToWordFrequencies);
 
-                sortWordFrequencies(wordFrequencies);
-
                 return getJoinedWordFrequencies(wordFrequencies);
             } catch (Exception e) {
                 return CALCULATE_ERROR;
             }
         }
-    }
-
-    private static void sortWordFrequencies(List<WordFrequency> wordFrequencies) {
-        wordFrequencies.sort((word1, word2) -> word2.getWordCount() - word1.getWordCount());
     }
 
     private static String getJoinedWordFrequencies(List<WordFrequency> wordFrequencies) {
@@ -45,6 +39,7 @@ public class WordFrequencyGame {
         return wordToWordFrequencies.entrySet()
                 .stream()
                 .map(entry -> new WordFrequency(entry.getKey(), entry.getValue().size()))
+                .sorted((word1, word2) -> word2.getWordCount() - word1.getWordCount())
                 .collect(Collectors.toList());
     }
 

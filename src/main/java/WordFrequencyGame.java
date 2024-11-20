@@ -11,21 +11,17 @@ public class WordFrequencyGame {
         if (sentence.split(SPACE_REGEX).length == 1) {
             return sentence + " 1";
         }
-        try {
-            //split the input string with 1 to n pieces of spaces
-            String[] words = sentence.split(SPACE_REGEX);
+        //split the input string with 1 to n pieces of spaces
+        String[] words = sentence.split(SPACE_REGEX);
 
-            List<WordFrequency> wordFrequencies = getInitialWordFrequencies(words);
+        List<WordFrequency> wordFrequencies = getInitialWordFrequencies(words);
 
-            //get the map for the next step of sizing the same word
-            Map<String, List<WordFrequency>> wordToWordFrequencies = getWordFrequencyMap(wordFrequencies);
+        //get the map for the next step of sizing the same word
+        Map<String, List<WordFrequency>> wordToWordFrequencies = getWordFrequencyMap(wordFrequencies);
 
-            wordFrequencies = getFinalWordFrequencies(wordToWordFrequencies);
+        wordFrequencies = getFinalWordFrequencies(wordToWordFrequencies);
 
-            return getJoinedWordFrequencies(wordFrequencies);
-        } catch (Exception e) {
-            return CALCULATE_ERROR;
-        }
+        return getJoinedWordFrequencies(wordFrequencies);
     }
 
     private static String getJoinedWordFrequencies(List<WordFrequency> wordFrequencies) {

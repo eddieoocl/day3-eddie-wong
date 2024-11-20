@@ -1,0 +1,16 @@
+- Refactor: Ctrl + Shift + R
+- Show Context Actions: Ctrl + .
+- Extract Method: Ctrl + Alt + M
+- Introduce Constant: Ctrl + Alt + C
+- Introduce Variable: Ctrl + Alt + V
+- Git (Tool Windows): Ctrl + Shift + G
+- Terminal: Ctrl + `
+- Navigate -> Back: Alt + Left Arrow
+- Navigate -> Forward: Alt + Right Arrow
+- Recent Files: Ctrl + E
+- Navigate -> Go to File: Ctrl + P
+- Find In Files: Ctrl + Shift + F
+- Folding -> Expand All: Ctrl + K Ctrl + J
+- Navigate -> Go to Declaration or Usages: F12
+- Select File in Project View: Ctrl + K
+- Increase Font Size In All Editors: Ctrl + =
